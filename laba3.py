@@ -45,7 +45,10 @@ res_age_corrector = age_corrector(age)
 if (int(age)<=40) and (int(age)>=20):
     if (age==20) or (age==30) or (age==40) or ((age>=25) and (age<30)) or ((age>=35) and (age<40)):
         print(res_age_corrector + ' лет')
-    print(res_age_corrector + ' год')
+    if (str(age)[1]=='1'):
+        print(res_age_corrector + ' год')
+    if (str(age)[1]=='2') or (str(age)[1]=='3') or (str(age)[1]=='4'):
+        print(res_age_corrector + ' года')
 else:
     print("Неверный диапозон возраста")
 
